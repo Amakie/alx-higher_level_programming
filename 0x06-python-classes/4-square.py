@@ -21,6 +21,8 @@ class Square:
     def size(self):
         """returns size"""
 
+        return (self.__size)
+
     @size.setter
     def size(self, value):
         """mutates the class to add value"""
