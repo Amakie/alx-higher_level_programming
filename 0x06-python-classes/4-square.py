@@ -11,12 +11,6 @@ class Square:
         """defines the private attribute"""
         self.__size = size
 
-    """defines a public instance method"""
-    def area(self):
-
-        """returns the current area"""
-        return (self.__size ** 2)
-
     @property
     def size(self):
         """returns size"""
@@ -31,3 +25,9 @@ class Square:
             raise TypeError("size must be an integer")
         elif (value < 0):
             raise ValueError("size must be >= 0")
+
+    """defines a public instance method"""
+    def area(self):
+
+        """returns the current area"""
+        return (self.__size ** 2)
