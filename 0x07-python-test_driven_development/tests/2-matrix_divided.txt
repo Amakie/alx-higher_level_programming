@@ -1,0 +1,28 @@
+2 matrix divided module
+
+Test cases
+----------
+
+Importing the function
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+
+Matrix is not a list containing either integers and floats
+	>>> print(matrix_divided(matrix, 3))
+        >>>Traceback (most recent call last):
+        >>>TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Matrix is empty
+        >>> print(matrix_divided(matrix, 3))
+        >>>Traceback (most recent call last):
+        >>>TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Matrix is a list and string
+        >>> print(matrix_divided(matrix, 3))
+        >>>Traceback (most recent call last):
+        >>>TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Matrix divisor must not be zero
+	>>>print(matrix_divided(matrix, 0))
+	>>>Traceback (most recent call last):
+	>>>ZeroDivisionError: division by zero
