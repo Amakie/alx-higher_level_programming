@@ -8,7 +8,10 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """This initializes the rectangle class
-        The class has two attributes. Width and height
+        The class has two attributes
+        Arguments:
+            width: integer and by default, 0
+            height: integer and by defaul, 0
         """
 
         self.width = width
