@@ -3,25 +3,26 @@
 
 
 class Rectangle:
-    """this represents a rectangle"""
+    """this is a rectangle"""
     number_of_instances = 0
 
+
     def __init__(self, width=0, height=0):
-         """Initializes this rectangle class
-         Arguments:
+        """Initializes this rectangle class
+        Arguments:
             width: represents the width of the rectangle
             height: represents the height of the rectangle
-         Raises:
+        Raises:
             TypeError: if size is not integer
             ValueError: if size is less than zero
         """
-         self.width = width
-         self.height = height
-         Rectangle.number_of_instances += 1
+        self.width = width
+        self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
-        """retrieves width attribute"""
+        """returns width attribute"""
         return self.__width
 
     @width.setter
@@ -35,7 +36,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """retrieves height attribute"""
+        """gets height attribute"""
         return self.__height
 
     @height.setter
@@ -57,8 +58,8 @@ class Rectangle:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
-    def __str__(self) -> str:
-        """presents a diagram of the rectangle"""
+    def __str__(self):
+        """presents a diagram of the rectangle defined for an object"""
         if self.__width == 0 or self.__height == 0:
             return ('')
         rectangle = ''
@@ -70,10 +71,12 @@ class Rectangle:
         return (rectangle)
 
     def __repr__(self):
-        """returns a string representation of rectangle"""
+        """returns string representation of rectangle"""
+
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
-        """prints object message"""
+        """prints a message for every object that is deleted"""
+
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
