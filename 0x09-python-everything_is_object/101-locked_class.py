@@ -7,4 +7,4 @@ class LockedClass:
     A class that does not allow any other instances
     Unless it called first name
     """
-    __slot__ = [first_name]
+    __slots__ = ["first_name"]
