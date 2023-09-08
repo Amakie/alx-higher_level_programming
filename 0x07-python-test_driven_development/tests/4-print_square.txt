@@ -1,0 +1,54 @@
+Test cases for 4-print_square
+
+This function prints squares using #
+
+Test cases 
+
+Importing the function
+	>>> print_square = __import__('4-print_square').print_square
+
+Check module and function has doc-string
+	>>> len(__import__('4-print_square').__doc__) > 1
+	True
+	>>> len(__import__('4-print_square').print_square.__doc__) > 1
+	True
+
+Correct output
+	>>> print_square(4)
+	####
+    	####
+    	####
+    	####
+
+	>>> print_square(10)
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+
+	>>> print_square(1)
+	#
+
+	>>> print_square("size not an int")
+    	Traceback (most recent call last):
+    	TypeError: size must be an integer
+
+	>>> print_square("size less than zero")
+    	Traceback (most recent call last):
+    	TypeError: size must be an integer
+
+	>>> print_square("size is a string")
+    	Traceback (most recent call last):
+    	TypeError: size must be an integer
+
+	>>> print_square("size is a character")
+    	Traceback (most recent call last):
+    	TypeError: size must be an integer
+
+
