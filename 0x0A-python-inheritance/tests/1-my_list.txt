@@ -1,0 +1,71 @@
+The ``1-my_list`` module
+======================
+
+>>> MyList = __import__('1-my_list').MyList
+
+Case - Normal case
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+Case - passed test
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> print(my_list)
+[1, 4]
+
+Case - mixed integer and character
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(f')
+>>> print(my_list)
+Traceback (most recent call last)
+TypeError: list should be an int
+
+
+Case - unique integer
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> print(my_list)
+[1]
+
+Case - new list
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(7)
+>>> my_list.append(17)
+>>> my_list.append(27)
+>>> print(my_list)
+[1, 7, 17, 27]
+>>> my_list.print_sorted()
+[1, 7, 17, 27]
+
+
+Case - Negative numbers
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(-2)
+>>> my_list.append(-3)
+>>> my_list.append(57)
+>>> my_list.append(31)
+>>> print(my_list)
+[1, -2, -3, 57, 31]
+>>> my_list.print_sorted()
+[-3, -2, 1, 31, 57]
+
+
+case - empty list
+>>> a = []
+>>> my_list = MyList(a)
+>>> my_list.print_sorted()
+[]
