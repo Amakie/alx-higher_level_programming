@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-"""test cases for project"""
-
-
 import unittest
 from models.base import Base
 from models.square import Square
 import json
 import inspect
 
-class test_base(unittest.Testcase):
+"""test cases for base module"""
+
+class test_base(unittest.TestCase):
     """class for test cases"""
 
     def test_no_id(self):
