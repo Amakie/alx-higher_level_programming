@@ -14,15 +14,15 @@ class test_base(unittest.Testcase):
     def test_no_id(self):
         """no id"""
         b = Base()
-        self.AssertEqual(1, b.id)
+        self.assertEqual(1, b.id)
 
-     def test_valid_id(self):
+    def test_valid_id(self):
         """valid id"""
         b = Base()
-        self.AssertEqual(50, b.id)
+        self.assertEqual(50, b.id)
 
     def test_zero_id(self):
         """zero id"""
         b = Base()
-        self.AssertEqual(0, b.id)
+        self.assertEqual(0, b.id)
 
