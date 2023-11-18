@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """scripts that lists all states"""
 
+from sys import argv
 import sys
 import MySQLdb
 
