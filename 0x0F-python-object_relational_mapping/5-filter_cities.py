@@ -16,7 +16,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     cursor.execute("SELECT cities.name FROM cities \
     INNER JOIN states ON states.id = cities.state_id \
-    WHERE states.name LIKE BINARY %s ORDER BY cities.id ASC", (argv[4],))
+    WHERE states.name LIKE BINARY %s ORDER BY cities.id ASC", (argv[4], ))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
